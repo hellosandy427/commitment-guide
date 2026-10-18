@@ -212,11 +212,11 @@ const copy={
         "items": [
           [
             "說明協助需求",
-            "勾選「需要協助／待協調」，寫明需要誰協助或決定什麼。"
+            "有需要時勾選「需要協助／待協調」；勾選後需填寫協助說明，寫明需要誰協助或決定什麼。沒有需要時可不勾選。"
           ],
           [
             "補充佐證資料",
-            "補充佐證內容及本週佐證 NAS 路徑。若該承諾的「專案 NAS 資料夾」標示必填，須另確認該欄位已提供並儲存，才能提交週報。"
+            "「其他資料」中的佐證／補充資料及本週佐證 NAS 路徑為選填，沒有資料可留空。若該承諾的「專案 NAS 資料夾」標示必填，須另確認該欄位已提供並儲存，才能提交週報。"
           ],
           [
             "確認整項承諾是否結束",
@@ -500,11 +500,11 @@ const copy={
         "items": [
           [
             "说明协助需求",
-            "勾选“需要协助／待协调”，写明需要谁协助或决定什么。"
+            "有需要时勾选“需要协助／待协调”；勾选后需填写协助说明，写明需要谁协助或决定什么。没有需要时可不勾选。"
           ],
           [
             "补充佐证资料",
-            "补充佐证内容及本周佐证 NAS 路径。若该承诺的“专案 NAS 资料夹”标示必填，须另确认该字段已提供并储存，才能提交周报。"
+            "“其他资料”中的佐证／补充资料及本周佐证 NAS 路径为选填，没有资料可留空。若该承诺的“专案 NAS 资料夹”标示必填，须另确认该字段已提供并储存，才能提交周报。"
           ],
           [
             "确认整项承诺是否结束",
@@ -788,11 +788,11 @@ const copy={
         "items": [
           [
             "Describe the support needed",
-            "Check “需要協助／待協調” (Support or coordination needed). State who needs to help and what decision is required."
+            "Select “需要協助／待協調” (Support or coordination needed) only when needed. Once selected, an explanation is required: state who needs to help or what decision is needed. Otherwise, leave it unchecked."
           ],
           [
             "Add evidence",
-            "Add supporting information and the weekly evidence NAS path. If “專案 NAS 資料夾” (Project NAS folder) is marked required, complete and save that separate field before submitting the weekly report."
+            "Supporting information and the weekly evidence NAS path under Other information are optional and may be left blank. If “專案 NAS 資料夾” (Project NAS folder) is marked required, complete and save that separate field before submitting the weekly report."
           ],
           [
             "Check whether the whole commitment has ended",
