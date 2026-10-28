@@ -1,21 +1,29 @@
+.wr-conversation .wr-messages{display:flex;flex-direction:column;gap:14px;margin:14px 0}
+.wr-conversation .wr-message{width:fit-content;max-width:88%;padding:12px 14px;border:1px solid;border-radius:12px;overflow-wrap:anywhere;box-sizing:border-box}
+.wr-conversation .wr-reviewer{align-self:flex-start;background:#edf4fc;border-color:#c4d7ee;color:#18344f;border-top-left-radius:3px}
+.wr-conversation .wr-owner{align-self:flex-end;background:#edf8f0;border-color:#bddcc7;color:#214f34;border-top-right-radius:3px}
+.wr-conversation .wr-message-meta{display:flex;flex-wrap:wrap;gap:3px 8px;font-size:12px;line-height:1.6;color:#506575}
+.wr-conversation .wr-owner .wr-message-meta{color:#4b6855}
+.wr-conversation .wr-message .copy-text{white-space:pre-wrap;margin:7px 0 0;line-height:1.7}
+.wr-conversation .wr-message details{margin-top:8px;font-size:13px}
+.wr-conversation .wr-conversation-actions{flex-wrap:wrap;gap:8px;margin-top:14px}
+.wr-conversation-help{margin:4px 0 12px;color:#617080}
+.wr-dialog-topic{white-space:pre-wrap;max-height:130px;overflow:auto;border-left:3px solid #a8c0da;padding:8px 12px;background:#f1f6fc}
+@media(max-width:600px){.wr-conversation .wr-message{max-width:94%;padding:10px 12px}.wr-conversation .wr-message-meta time{width:100%}.wr-conversation .wr-conversation-actions .mw-button{white-space:normal}}
+
 .review-exchange{margin-top:36px;padding-top:32px;border-top:1px solid #e1e4e8}
-.review-exchange-heading>span{font-size:13px;font-weight:700;color:#a82439;letter-spacing:.05em}
-.lesson .review-exchange-heading h4{margin:8px 0 10px;font-size:24px;line-height:1.5}
-.review-exchange-heading p{margin:0 0 24px;color:#586575;font-size:15px;line-height:1.8}
-.review-conversation{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid #e3e6eb;display:grid;gap:20px;counter-reset:exchange}
-.review-turn{position:relative;margin-right:56px;padding:22px 24px;border:1px solid #dce3eb;border-radius:12px;background:#f7f9fc;counter-increment:exchange}
-.review-turn::before{content:counter(exchange);position:absolute;left:-36px;top:22px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#52677d;color:#fff;font-size:12px;border:2px solid #fff}
-.review-turn-owner{margin-left:40px;margin-right:0;background:#fff;border-color:#e5d6dc}
-.review-turn-owner::before{left:-76px;background:#a82439}
-.review-turn-followup{border-left:4px solid #b78342;background:#fcf8f2}
-.review-turn-closed{background:#f3f8f5;border-color:#d6e4dc}
-.review-turn-meta{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;font-size:15px}
-.review-turn-meta time{width:100%;font-size:13px;color:#586575}
-.review-stage{border:1px solid #d5dce3;background:#fff;border-radius:5px;padding:3px 8px;font-size:12px;color:#415165}
-.review-turn p{font-size:16px;line-height:1.85;margin:14px 0}
-.review-turn a{display:inline-block;font-size:14px;line-height:1.8;color:#a82439;padding:8px 0;text-underline-offset:4px}
-.review-turn a:focus-visible{outline:2px solid #a82439;outline-offset:4px}
-.review-next-action{border-top:1px solid #dedfdc;padding-top:12px;font-size:14px;line-height:1.8;color:#49515b}
-.review-next-action strong{display:block;color:#28333e}
-@media(max-width:760px){.review-turn{margin-right:0;padding:18px 16px}.review-turn-owner{margin-left:0}.review-turn-owner::before{left:-36px}.lesson .review-exchange-heading h4{font-size:21px}}
-.review-conversation{margin-left:14px}
+.review-exchange-heading>span{font-size:13px;font-weight:700;color:#a82439}
+.lesson .review-exchange-heading h4{margin:8px 0 10px;font-size:24px}
+.review-exchange-heading p,.review-later>p{font-size:15px;line-height:1.8;color:#586575}
+.review-system-example{padding:24px;background:#eeebe6;border:1px solid #ded8d0;border-radius:14px}
+.lesson .review-system-example h4{margin:0;font-size:16px}
+.review-exchange .wr-conversation{padding:16px;background:#fafbfc;border:1px solid #d5dfe7;border-left:3px solid #809eaf;border-radius:5px;font-size:14px}
+.review-exchange .wr-message p{font-size:15px}
+.review-exchange .wr-conversation-help{font-size:14px;line-height:1.7}
+.review-example-actions{display:flex;flex-wrap:wrap;gap:8px}
+.review-example-actions span{padding:9px 14px;background:white;border:1px solid #cbd2da;border-radius:6px;font-size:14px}
+.review-example-actions span:first-child{background:#a82439;color:#fff;border-color:#a82439}
+.review-instruction{margin:18px 0 24px;padding:18px 22px;border-left:4px solid #a82439;background:#fcf3f5;font-size:16px}
+.review-instruction p{font-size:15px;line-height:1.8;margin:8px 0}
+.review-later{padding-top:20px;border-top:1px solid #ddd}
+@media(max-width:600px){.review-system-example{padding:16px 12px}.review-exchange .wr-conversation{padding:12px}.review-instruction{padding:16px}.lesson .review-exchange-heading h4{font-size:21px}}
