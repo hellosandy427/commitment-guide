@@ -1,0 +1,21 @@
+.review-exchange{margin-top:36px;padding-top:32px;border-top:1px solid #e1e4e8}
+.review-exchange-heading>span{font-size:13px;font-weight:700;color:#a82439;letter-spacing:.05em}
+.lesson .review-exchange-heading h4{margin:8px 0 10px;font-size:24px;line-height:1.5}
+.review-exchange-heading p{margin:0 0 24px;color:#586575;font-size:15px;line-height:1.8}
+.review-conversation{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid #e3e6eb;display:grid;gap:20px;counter-reset:exchange}
+.review-turn{position:relative;margin-right:56px;padding:22px 24px;border:1px solid #dce3eb;border-radius:12px;background:#f7f9fc;counter-increment:exchange}
+.review-turn::before{content:counter(exchange);position:absolute;left:-36px;top:22px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#52677d;color:#fff;font-size:12px;border:2px solid #fff}
+.review-turn-owner{margin-left:40px;margin-right:0;background:#fff;border-color:#e5d6dc}
+.review-turn-owner::before{left:-76px;background:#a82439}
+.review-turn-followup{border-left:4px solid #b78342;background:#fcf8f2}
+.review-turn-closed{background:#f3f8f5;border-color:#d6e4dc}
+.review-turn-meta{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;font-size:15px}
+.review-turn-meta time{width:100%;font-size:13px;color:#586575}
+.review-stage{border:1px solid #d5dce3;background:#fff;border-radius:5px;padding:3px 8px;font-size:12px;color:#415165}
+.review-turn p{font-size:16px;line-height:1.85;margin:14px 0}
+.review-turn a{display:inline-block;font-size:14px;line-height:1.8;color:#a82439;padding:8px 0;text-underline-offset:4px}
+.review-turn a:focus-visible{outline:2px solid #a82439;outline-offset:4px}
+.review-next-action{border-top:1px solid #dedfdc;padding-top:12px;font-size:14px;line-height:1.8;color:#49515b}
+.review-next-action strong{display:block;color:#28333e}
+@media(max-width:760px){.review-turn{margin-right:0;padding:18px 16px}.review-turn-owner{margin-left:0}.review-turn-owner::before{left:-36px}.lesson .review-exchange-heading h4{font-size:21px}}
+.review-conversation{margin-left:14px}
