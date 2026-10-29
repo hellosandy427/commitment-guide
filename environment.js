@@ -88,7 +88,7 @@ const COPY={
         "num": "!",
         "title": "資料待修正",
         "audience": "部門協作",
-        "lead": "紅色提醒會列出資料哪裡矛盾、哪裡沒填。照清單逐項改，不用自己猜問題在哪裡。",
+        "lead": "資料矛盾或不足，無法確認案件現況時，先列資料待修正；結案後仍缺必填資料也在此補齊。若下一步已明確，其他缺漏會寫在原階段卡片，不重複計數。",
         "actions": [
           [
             "決定不執行",
@@ -500,7 +500,7 @@ const COPY={
         "num": "!",
         "title": "资料待修正",
         "audience": "部门协作",
-        "lead": "在同一区处理资料缺漏与字段矛盾。先看信件指出哪里有问题，再由部门共同补正。",
+        "lead": "资料矛盾或不足，无法确认案件现况时，先列资料待修正；结案后仍缺必填资料也在此补齐。若下一步已明确，其他缺漏会写在原阶段卡片，不重复计数。",
         "actions": [
           [
             "决定不执行",
@@ -1268,34 +1268,39 @@ function addMailMarkers(){
 const READING_COPY={
   "zh-Hant": {
     "subject": "先看信件標題與總數",
-    "subjectNote": "本信共 19 項待辦，包含待驗收 5 項。資料待修正也包含在總數內，請勿把各區數字直接相加。",
+    "subjectNote": "這是 2026/10/19 舊版固定案例：19 項待辦、待驗收 5 項。當時資料提醒與流程重疊；自 10/29 起已改為一案一類，最新統計可直接加總。",
     "conflict": "先處理資料待修正",
     "conflictCount": "資料待修正｜4 項",
     "conflictNote": "資料缺漏與矛盾合併提醒，同一案件只算 1 項。No.46 同時有欄位矛盾與日期缺漏，兩處都要修正。",
     "conflictLink": "看 No.46 的提醒與修正步驟 →",
     "categories": "依提醒類型，查看處理步驟",
-    "categoriesNote": "部門一起補資料、安排改善與完成驗收。資料待修正可能與下方流程階段重疊。"
+    "categoriesNote": "以下保留舊版教學畫面。現行規則：每案只歸一類，其他缺漏併入同一張卡片提醒；資料待修正不再與①至⑤重複計數。"
   },
   "zh-Hans": {
     "subject": "先看信件标题与总数",
-    "subjectNote": "本信共 19 项待办，包含待验收 5 项。资料待修正也包含在总数内，不要直接相加各区数字。",
+    "subjectNote": "这是 2026/10/19 旧版固定案例：19 项待办、待验收 5 项。当时资料提醒与流程重叠；自 10/29 起已改为一案一类，最新统计可直接相加。",
     "conflict": "先处理资料待修正",
     "conflictCount": "资料待修正｜4 项",
     "conflictNote": "资料缺漏与矛盾合并提醒，同一案件只算 1 项。No.46 同时有字段矛盾与日期缺漏，两处都要修正。",
     "conflictLink": "看 No.46 的提醒与修正步骤 →",
     "categories": "按提醒类型，查看处理步骤",
-    "categoriesNote": "部门共同补资料、安排改善与完成验收。资料待修正可能与下方流程阶段重叠。"
+    "categoriesNote": "以下保留旧版教学画面。现行规则：每案只归一类，其他缺漏并入同一张卡片提醒；资料待修正不再与①至⑤重复计数。"
   },
   "en": {
     "subject": "Read the subject and total",
-    "subjectNote": "There are 19 open cases, including 5 awaiting review. Data corrections are also included in the total; do not add the section counts together.",
+    "subjectNote": "This fixed 19 Oct 2026 example has 19 open cases, including 5 awaiting review. Its old categories overlap. Since 29 Oct, each case has one category and current counts can be added.",
     "conflict": "Address data corrections first",
     "conflictCount": "Data corrections | 4",
     "conflictNote": "Missing information and conflicts are combined, counting each case once. No.46 has both a conflicting status and a missing discovery date; correct both.",
     "conflictLink": "See No.46 and the correction steps →",
     "categories": "Choose a reminder type for its steps",
-    "categoriesNote": "Work as a team on information, arrangements and review. Data corrections may overlap with a workflow stage."
+    "categoriesNote": "The historical example stays unchanged. Current reports count each case in one category. Additional missing details stay on the same card and are not counted as another case."
   }
+};
+const CLASSIFICATION_COPY={
+  'zh-Hant':{title:'每個案件，只計一次',text:'部門待辦數＝資料待修正＋①逾期未完成＋②待補安排＋③期限內改善＋④待補佐證＋⑤待驗收。能判斷下一步，就歸對應階段，其他缺漏在同卡補正；現況無法判定才先修正資料。已完成且驗收通過仍缺必填資料，先補正再結案；不用追補原本預計日期。跨部門案件於全公司合計只算一次。',example:'例如 No.49 已接受但「目前狀態」空白，先列資料待修正，不直接猜測逾期。確認仍未完成才依日期判斷；已完成缺佐證列④，佐證齊全待驗收列⑤。新案尚未回應或缺安排列②。下方 10/19 教材畫面與數字固定保留，不代表最新分類。'},
+  'zh-Hans':{title:'每个案件，只计一次',text:'部门待办数＝资料待修正＋①逾期未完成＋②待补安排＋③期限内改善＋④待补佐证＋⑤待验收。能判断下一步，就归对应阶段，其他缺漏在同卡补正；现况无法判定才先修正资料。已完成且验收通过仍缺必填资料，先补正再结案；不用追补原本预计日期。跨部门案件在全公司合计只算一次。',example:'例如 No.49 已接受但“目前状态”空白，先列资料待修正，不直接猜测逾期。确认仍未完成才按日期判断；已完成缺佐证列④，佐证齐全待验收列⑤。新案尚未回应或缺安排列②。下方 10/19 教材画面与数字固定保留，不代表最新分类。'},
+  en:{title:'One case, one category',text:'Department open total = Data corrections + stages 1–5. When the next step is clear, keep the case in that stage and list other missing details on the same card. Unclear or conflicting status goes to Data corrections. Accepted completed cases with missing required details need correction before closure, but no retrospective planned date. Joint cases count once in the company total.',example:'No.49 is accepted but has a blank status: clarify it before calling it overdue. Once confirmed, unfinished work is assessed against its deadline; completed work needs evidence (4) or review (5). New unanswered cases or missing arrangements go to stage 2. The fixed 19 Oct images and numbers below show historical rules.'}
 };
 const SHORTCUT_COPY={
   'zh-Hant':{title:'你想先看什麼？',items:[['收到提醒，要怎麼處理？','用物管部案例，跟著 ①②③ 操作。'],['照片怎麼上傳、放進表格？','上傳照片、複製連結，再套用公式。'],['怎樣才算完成、可以結案？','確認完成狀態、佐證與驗收結果。'],['還有提醒？先看信上要你做什麼','看「待辦」和「本次請完成」，照指示逐項補好。']]},
@@ -1312,6 +1317,7 @@ function render(lang){
   const ids={brand:'brand',eyebrow:'eyebrow',title:'title',lead:'lead',prereq:'prereq',liveConsole:'live-console',mailLabel:'mail-label',mailTitle:'mail-title',caseLabel:'case-label',caseTitle:'case-title',caseText:'case-text',teamNote:'team-note',quickLabel:'quick-label',quickTitle:'quick-title',quickNote:'quick-note',finalLabel:'final-label',finalTitle:'final-title',schedule:'schedule-note',footer:'footer',back:'back'};
   Object.entries(ids).forEach(([key,id])=>document.getElementById(id).textContent=c[key]);
   document.getElementById('open-sheet').textContent=c.open;renderShortcuts(lang);
+  const rule=CLASSIFICATION_COPY[lang];document.getElementById('classification-title').textContent=rule.title;document.getElementById('classification-text').textContent=rule.text;document.getElementById('classification-example').textContent=rule.example;
   document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
   document.getElementById('snapshot-note').innerHTML=trainingNotice(c);
   const reading=READING_COPY[lang];
