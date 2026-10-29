@@ -38,3 +38,8 @@
 .review-left-column .review-example-actions a{padding:9px 14px;border:1px solid #cbd2da;border-radius:6px;background:#fff;color:#263b50;text-decoration:none;font-size:14px}
 .review-left-column .wr-message-meta time{width:100%}
 @media(max-width:760px){#report-reminders .lesson-screen{grid-template-columns:1fr}}
+.review-exchange .wr-conversation.wr-action-required{background:#fff0f2;border-color:#e7b2bb;border-left:3px solid #b4233e}
+.review-exchange .wr-conversation.wr-action-neutral{background:#f7f8fa;border-color:#dce1e6;border-left-color:#a3adb8}
+.review-action-cue{display:block;width:fit-content;margin-top:8px;padding:3px 8px;border-radius:5px;background:#f9dce3;color:#8c1930;font-size:13px;font-weight:700}
+.review-color-key{margin:28px 0 12px;font-size:15px;line-height:1.8;color:#586575}
+.review-color-key strong{color:#8c1930}
