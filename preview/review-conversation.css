@@ -27,3 +27,14 @@
 .review-instruction p{font-size:15px;line-height:1.8;margin:8px 0}
 .review-later{padding-top:20px;border-top:1px solid #ddd}
 @media(max-width:600px){.review-system-example{padding:16px 12px}.review-exchange .wr-conversation{padding:12px}.review-instruction{padding:16px}.lesson .review-exchange-heading h4{font-size:21px}}
+#report-reminders .lesson-screen{grid-template-columns:1fr 1.15fr}
+.review-left-column{min-width:0}
+.review-left-column .review-exchange{margin-top:24px;padding:20px 14px;border-top:2px solid #ce1236}
+.review-left-column .review-exchange-heading h4{font-size:18px}
+.review-left-column .review-system-example{padding:12px 8px}
+.review-left-column .review-instruction{padding:12px;margin-bottom:16px}
+.review-left-column .review-exchange .wr-conversation{padding:12px 10px}
+.review-left-column .review-exchange .wr-message{max-width:94%;padding:10px}
+.review-left-column .review-example-actions a{padding:9px 14px;border:1px solid #cbd2da;border-radius:6px;background:#fff;color:#263b50;text-decoration:none;font-size:14px}
+.review-left-column .wr-message-meta time{width:100%}
+@media(max-width:760px){#report-reminders .lesson-screen{grid-template-columns:1fr}}
