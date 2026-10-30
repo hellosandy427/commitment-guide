@@ -433,7 +433,7 @@ const copy={
         ]
       }
     ],
-    "development": "開發中",
+    "development": "開發中，敬請期待",
     "developmentText": "此教學正在調整，完成後將開放。",
     "testBanner": "測試區｜內容調整中",
     "testTitle": "測試區"
@@ -853,7 +853,7 @@ const copy={
         ]
       }
     ],
-    "development": "开发中",
+    "development": "开发中，敬请期待",
     "developmentText": "此教学正在调整，完成后将开放。",
     "testBanner": "测试区｜内容调整中",
     "testTitle": "测试区"
@@ -1273,7 +1273,7 @@ const copy={
         ]
       }
     ],
-    "development": "In development",
+    "development": "Coming soon",
     "developmentText": "This guide is being updated and will be available when ready.",
     "testBanner": "TEST AREA · CONTENT IN REVIEW",
     "testTitle": "Test area"
@@ -1309,7 +1309,7 @@ const emailLinks=s=>esc(s).replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi,ema
 function picture(s,i,k=0,item=false){const key=`${i}:${item?'item':'step'}:${k}`;const marks=s.annotated?[]:s.customMarks?(s.marks||[]):guideMarks[key]||guideMarks[`${i}:step`]||s.marks||[];return `<span class="image-wrap"><img src="${s.local?s.image:(isPreview?'../':'')+'assets/'+s.image}?v=7" alt="${esc(s.alt)}" ${s.ratio?`style="aspect-ratio:${s.ratio};object-fit:cover;object-position:50% 48%"`:""} ${i?'loading="lazy"':''}>${marks.map(m=>`<span aria-hidden="true" class="mark" style="left:${m[0]}%;top:${m[1]}%;width:${m[2]}%;height:${m[3]}%"><em>${m[4]}</em></span>`).join('')}</span>`;}
 function render(lang){current=lang;const c=copy[lang];document.documentElement.lang=lang;document.body.classList.toggle('en-ui',lang==='en');document.title=(isPreview?c.testTitle+' | ':'')+c.nav[pageIndex]+' | '+c.title;document.querySelector('meta[name=description]').content=c.lead;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=c[e.dataset.i]);document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));document.querySelectorAll('.system-link').forEach(a=>a.href=SYSTEM);document.querySelector('.steps-nav').setAttribute('aria-label',lang==='en'?'Guide steps':lang==='zh-Hans'?'教学步骤':'教學步驟');document.querySelector('.steps-nav').innerHTML=c.nav.map((n,i)=>{const disabled=!isPreview&&i===3;const content=`<b>${String(i+1).padStart(2,'0')}</b><strong>${esc(n)}</strong><span>${esc(disabled?c.development:c.navDesc[i])}</span>`;return disabled?`<div class="nav-disabled" aria-disabled="true">${content}</div>`:`<a href="${pageFiles[i]}" data-group="${i}" aria-current="${i===activeGroup?'page':'false'}">${content}</a>`}).join('');
 document.querySelector('#sections').innerHTML=groups.filter((_,gi)=>gi===pageIndex).map((g)=>{const gi=pageIndex;return `<div class="guide-group ${gi===activeGroup?'active':''}" id="${g.id}" ${gi===activeGroup?'':'hidden'}><div class="group-heading"><span>${String(gi+1).padStart(2,'0')}</span><h2>${esc(c.nav[gi])}</h2></div>${gi===1||gi===2?`<nav class="section-shortcuts" aria-label="${lang==='en'?'Section shortcuts':lang==='zh-Hans'?'段落捷径':'段落捷徑'}">${(g.indices||Array.from({length:g.end-g.start},(_,j)=>g.start+j)).map((i,n)=>`<a href="#${ids[i]}"><span>${String(n+1).padStart(2,'0')}</span> ${esc(c.steps[i].title)}</a>`).join('')}</nav>`:''}${(g.indices||Array.from({length:g.end-g.start},(_,j)=>g.start+j)).map((i,j)=>{const s=c.steps[i];const shots=s.images||[s];return `<section class="step ${s.pending?'pending':''}" id="${ids[i]}"><span class="step-num">${String(j+1).padStart(2,'0')}${s.pending?'<span class="pending-label">PENDING</span>':''}</span><h3 class="step-title">${esc(s.title)}</h3><p>${esc(s.body)}</p>${s.items?`<ol class="items">${s.items.map(([t,b,shot],itemIndex)=>`<li><h3>${esc(t)}</h3><p>${esc(b)}</p>${shot?`<figure class="shot item-shot"><button class="shot-button" type="button" data-image="${i}" data-item="${itemIndex}" aria-label="${esc(c.zoom+': '+shot.alt)}">${picture(shot,i,itemIndex,true)}</button><figcaption>${esc(c.zoom)}</figcaption></figure>`:''}</li>`).join('')}</ol>`:''}${s.compare?`<div class="comparison">${s.compare.map(([t,b])=>`<div><h3>${esc(t)}</h3><p>${esc(b)}</p></div>`).join('')}</div>`:''}${s.note?`<p class="note important">${emailLinks(s.note)}</p>`:''}${s.after?`<p>${esc(s.after)}</p>`:''}${s.image||s.images?shots.map((shot,k)=>`<figure class="shot"><button class="shot-button" type="button" data-image="${i}" data-shot="${k}" aria-label="${esc(c.zoom+': '+shot.alt)}">${picture(shot,i,k)}</button><figcaption>${esc(c.zoom)}</figcaption></figure>`).join(''):''}${gi===1||gi===2?`<a class="section-back" href="#${g.id}">${esc(c.back)} ↑</a>`:''}</section>`}).join('')}<a class="screen-back" href="#top">${esc(c.back)} ↑</a></div>`}).join('');
-if(!isPreview&&pageIndex===3)document.querySelector('#sections').innerHTML=`<section class="step development-message"><span class="step-num">${String(pageIndex+1).padStart(2,'0')} · ${esc(c.nav[pageIndex])}</span><h2>${esc(c.development)}</h2><p>${esc(c.developmentText)}</p><a href="index.html">${esc(c.nav[0])}</a></section>`;document.querySelector('#close-zoom').textContent=c.close;}
+if(!isPreview&&pageIndex===3)document.querySelector('#sections').innerHTML=`<section class="step development-message"><span class="step-num">${String(pageIndex+1).padStart(2,'0')} · ${esc(c.nav[pageIndex])}</span><h2>${esc(c.development)}</h2><a href="index.html">${esc(c.nav[0])}</a></section>`;document.querySelector('#close-zoom').textContent=c.close;}
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{try{localStorage.setItem('commitment-guide-language-v2',b.dataset.lang)}catch{}render(b.dataset.lang)}));
 const dialog=document.querySelector('#zoom');
 document.querySelector('#sections').addEventListener('click',e=>{const b=e.target.closest('[data-image]');if(!b)return;const i=Number(b.dataset.image);const item=b.dataset.item!==undefined;const k=Number(item?b.dataset.item:b.dataset.shot)||0;const s=copy[current].steps[i];const shot=item?s.items[k][2]:(s.images?s.images[k]:s);document.querySelector('#zoom-caption').textContent=shot.alt;document.querySelector('#zoom-content').innerHTML=picture(shot,i,k,item);dialog.showModal();});
