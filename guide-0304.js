@@ -290,7 +290,7 @@ const copy={
         "note": "已確認代表承諾內容已確認，已提交代表所選週報已送出，均不代表工作已完成。切換過去週別時，依「所選週回報進度」判讀。"
       }
     ],
-    "development": "開發中，敬請期待",
+    "development": "開發中，敬請期待❤️",
     "developmentText": "此教學正在調整，完成後將開放。",
     "testBanner": "測試區｜內容調整中",
     "testTitle": "測試區"
@@ -585,7 +585,7 @@ const copy={
         "note": "已确认代表承诺内容已确认，已提交代表所选周报已送出，均不代表工作已完成。切换过去周别时，依“所选周回报进度”判断。"
       }
     ],
-    "development": "开发中，敬请期待",
+    "development": "开发中，敬请期待❤️",
     "developmentText": "此教学正在调整，完成后将开放。",
     "testBanner": "测试区｜内容调整中",
     "testTitle": "测试区"
@@ -880,7 +880,7 @@ const copy={
         "note": "Confirmed means the commitment details were confirmed; submitted means the selected weekly report was sent. Neither means the work is complete. For a past week, read the progress for that selected week."
       }
     ],
-    "development": "Coming soon",
+    "development": "Coming soon ❤️",
     "developmentText": "This guide is being updated and will be available when ready.",
     "testBanner": "TEST AREA · CONTENT IN REVIEW",
     "testTitle": "Test area"

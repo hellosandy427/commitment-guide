@@ -433,7 +433,7 @@ const copy={
         ]
       }
     ],
-    "development": "開發中，敬請期待",
+    "development": "開發中，敬請期待❤️",
     "developmentText": "此教學正在調整，完成後將開放。",
     "testBanner": "測試區｜內容調整中",
     "testTitle": "測試區"
@@ -853,7 +853,7 @@ const copy={
         ]
       }
     ],
-    "development": "开发中，敬请期待",
+    "development": "开发中，敬请期待❤️",
     "developmentText": "此教学正在调整，完成后将开放。",
     "testBanner": "测试区｜内容调整中",
     "testTitle": "测试区"
@@ -1273,7 +1273,7 @@ const copy={
         ]
       }
     ],
-    "development": "Coming soon",
+    "development": "Coming soon ❤️",
     "developmentText": "This guide is being updated and will be available when ready.",
     "testBanner": "TEST AREA · CONTENT IN REVIEW",
     "testTitle": "Test area"
