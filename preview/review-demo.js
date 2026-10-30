@@ -8,12 +8,17 @@ function mount(){
  const additions=[...later.querySelectorAll('.wr-message')].map(e=>e.outerHTML);
  const actions=card.querySelector('.review-example-actions'),instruction=root.querySelector('.review-instruction');
  const originalInstruction=instruction.innerHTML;
+ const archive=document.createElement('details');archive.className='review-demo-archive';
+ archive.innerHTML='<summary>已结束追踪 1 条</summary>';
+ example.append(archive);archive.hidden=true;
  later.remove();root.querySelector('.review-states')?.remove();root.querySelector('.review-color-key')?.remove();
  const controls=document.createElement('div');controls.className='review-demo-controls';
  controls.innerHTML='<p class="review-demo-caption">点选阶段，看同一条提问如何来回处理</p><div class="review-demo-stages" role="group" aria-label="示例阶段"><button type="button" data-stage="0">① 待填报人回应</button><button type="button" data-stage="1">② 已回应，待核对</button><button type="button" data-stage="2">③ 已结束追踪</button></div><div class="review-demo-perspectives" role="group" aria-label="查看视角"><span>查看视角</span><button type="button" data-perspective="owner">填报人</button><button type="button" data-perspective="reviewer">原提问管理阶层</button></div><p class="review-demo-feedback" role="status" aria-live="polite"></p><small>教学切换示例，不会提交或修改系统资料。右侧保留填报人填写示例。</small>';
  screen.before(controls);
  let stage=0,perspective='owner';
  function update(){
+  archive.open=false;archive.hidden=stage!==2;
+  if(stage===2)archive.append(card);else example.insertBefore(card,archive);
   controls.querySelectorAll('[data-stage]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.stage)===stage)));
   controls.querySelectorAll('[data-perspective]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.perspective===perspective)));
   const active=(stage===0&&perspective==='owner')||(stage===1&&perspective==='reviewer');
